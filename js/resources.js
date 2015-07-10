@@ -69,12 +69,17 @@ game.resources = [
 		name : "platform",
 		type : "image",
 		src  : "data/image/sprite/platform.png"
-	},
-	{
-		name : "teleporter",
-		type : "image",
-		src  : "data/image/sprite/teleporter.png"
-	},
+    },
+    {
+        name : "teleporter",
+        type : "image",
+        src  : "data/image/sprite/teleporter.png"
+    },
+    {
+        name : "shiny",
+        type : "image",
+        src  : "data/image/sprite/shiny.png"
+    },
 
 	// Backgrounds
 	{

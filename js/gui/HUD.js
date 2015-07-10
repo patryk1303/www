@@ -41,3 +41,27 @@ game.HUD.Container = me.ObjectContainer.extend({
 	}
 });
 
+game.HUD.Shinys = me.Renderable.extend({
+    init: function(x,y) {
+        this._super(me.Renderable, 'init', [x,y,10,10]);
+        
+        this.shinys = -1;
+    },
+    
+    update: function(dt) {
+        if(this.shinys !== game.data.shinys) {
+            return true;
+        }
+        return false;
+    },
+    
+    draw: function(context) {
+
+        game.font_white.draw(
+            context,
+            'COLLECTED ' + game.data.shunys + '\nTRINKETS',
+            this.pos.x,
+            this.pos.y
+        );
+    }
+});

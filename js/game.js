@@ -23,6 +23,9 @@ var game = {
 	data : {
 		// How many times the player has died
 		deaths : 0,
+        
+        // Collected shinys
+        shinys : 0,
 
 		// First level to be loaded
 		currentLevel : "area000"
@@ -187,6 +190,7 @@ var game = {
 		me.pool.register("platform",           game.platform.entity,           true);
 		me.pool.register("platform-vanishing", game.platform.vanishing.entity, true);
 		me.pool.register("platform-movable",   game.platform.movable.entity,   true);
+        me.pool.register("shiny-trinket",      game.shinys.entity,             true);
 
 		// Defining some custom constants to uniquely
 		// identify some entities on the whole game.
@@ -195,6 +199,7 @@ var game = {
 		me.game.PLATFORM_OBJECT   = "platform";
 		me.game.PLATFORM_VANISHING_OBJECT = "platform-vanishing";
 		me.game.PLATFORM_MOVABLE_OBJECT   = "platform-movable";
+        me.game.SHINY_TRINKET             = "shiny-trinket";
 
 		// Global fonts we'll use to draw text
 		// (see `resources.js`)
